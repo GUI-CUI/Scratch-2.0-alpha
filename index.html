@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Scratch Project Editor - Imagine, Program, Share</title>
+    <link href="http://web.archive.org/web/20120520040921cs_/http://alpha.scratch.mit.edu/scratchr2/static//css/scratch.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+      console=window.console||{log:function(){},debug:function(){}}; // so console calls don't break ie
+    </script>
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/global.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/lib.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/nav.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/bootstrap-modal.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/ui.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/servercalls.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/server.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/comment.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/bootstrap-dropdown.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/bootstrap-tab.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/carousel.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/alert.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/actionbar.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/addto.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/follow.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/favorite.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/love.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/notification-alert.js"></script> 
+    <script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/admin-panel.js"></script> 
+    <script type="text/javascript">
+    	var id;
+    	var path = window.location.pathname
+    	var projects = [162167, 9710, 1062526, 314590, 107478, 23258, 58059, 63748, 1741316, 488476, 1692236, 647875, 1124663, 171608, 89023,20884, 23258, 1092, 658960, 72836, 1062526, 1628404, 1801269, 879463, 62830, 171608, 1059859, 63748, 9397, 15121,62832, 57610, 62835, 62838, 62830, 2079, 62839, 11292, 255530, 1431, 23012, 61469, 40435, 40150, 61469, 10000556, 10000638, 10000339, 10001237, 10000917, 10000036, 10000854, 10001345, 10000832, 10000100, 10000856]
+    	if (path.indexOf("/projects/")!=-1 && path.indexOf("/search/")==-1){ id = "" }
+    	else if (path.indexOf("/galleries/")!=-1 && path.indexOf("/search/")==-1){ id = "" } 
+    	else if (path.indexOf("/users/")!=-1 && path.indexOf("/search/")==-1){ id = "" }
+    	else { id = ""+projects[Math.floor(Math.random()*projects.length)] }
+		$(document).ready(function() {  
+			$("#explore_link").attr("href","/explore/?id="+id)
+		})
+  </script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30688952-1']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'http://web.archive.org/web/20120520040921/https://ssl' : 'http://web.archive.org/web/20120520040921/http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+<link href="http://web.archive.org/web/20120520040921cs_/http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/history.adapter.jquery.js"></script> 
+<script type="text/javascript" src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/history.js"></script> 
+<script src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/swfobject.js"></script>
+<script src="http://web.archive.org/web/20120520040921js_/http://alpha.scratch.mit.edu/scratchr2/static//js/editor.js"></script>
+<script>
+  data = {
+    user: {
+      username: '',
+      id: null,
+    },
+    project: {
+      id: null,
+      owner: null,
+      title: 'Untitled',
+      isPrivate: true
+    }
+  };
+  $(document).ready(function() {
+    FA.init(data, 'scratch', true); 
+  });
+</script>
+
+<script src="/ruffle.js"></script>
+
+  </head>
+  
+  <body class="editor">
+    <div id="pagewrapper">
+      
+      
+        <a href="http://web.archive.org/web/20120520040921/https://docs.google.com/spreadsheet/viewform?formkey=dE9NdUZxSXVWNElWdkpHS3JVT3BhaVE6MQ" target="_blank">
+      
+	    <div id="feedback">
+	       <h3>Feedback</h3>
+	     </div>
+	   </a>
+	     
+	    
+	    <div id="topbar">
+	      <div class="topbar-inner">
+	        <div class="container">
+	          <a href="/web/20120520040921/http://alpha.scratch.mit.edu/"><img class="logo" src="http://web.archive.org/web/20120520040921im_/http://alpha.scratch.mit.edu/scratchr2/static//images/logo_sm.png"/></a>
+	        <ul class="nav main">
+	          <li><a href="/web/20120520040921/http://alpha.scratch.mit.edu/projects/editor/">Create</a></li>
+	          <li><a id="explore_link" href="">Explore</a></li>
+            <li><a href="/web/20120520040921/http://alpha.scratch.mit.edu/forums/">Discuss</a></li>
+            <li><a href="/web/20120520040921/http://alpha.scratch.mit.edu/help/scratch-day-preview/">Help</a></li>
+            
+          </ul>
+	        <ul class="nav secondary-nav">
+	          <li><form action="
+	          
+	          	 
+	          		 /search/projects/ 
+	          		
+	          	
+	          
+	          " method="get" class="search">
+	            <span class="glass"><i></i></span>
+	               <input type="text" name="q">
+		          <input type="hidden" name="sort_by" value="loves">
+		          <input type="hidden" name="date" value="anytime">
+		        </form></li>
+	          
+	          <li class="dropdown"><span class="dropdown-toggle" data-toggle="dropdown">Login</span>
+	          <div class="dropdown-menu">
+	            <form method="post" id="login">
+                <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="YXjWnQvMKToU7nlxWqG9MeOEuMZTMCjZ"/></div>
+                <p class="alert">You're not able to login to Scratch 2.0 yet.</p>
+	                  <label for="username">Username</label>
+	                  <input id="username" type="text" name="username" maxlength="30"/>
+	                  <label for="password" class="password">Password</label>
+	                  <input type="password" name="password" id="password"/>
+                    <button type="submit">Login</button>
+                    <div class="error"></div>
+	              </form> 
+	          </div>
+	          </li>
+	          
+	        </ul>
+	        </div>
+	      </div>
+	    </div>
+	    
+	
+	    
+	    <div class="container" id="content">
+	      
+
+
+
+
+<div class="showcase" id="project">
+  <div class="box">
+    <div class="box-head">
+      
+    </div>
+    <div class="box-content">
+      <div class="stage">
+        <div class="player">
+          
+<!-- Start template projects/editor.html project-swf -->
+  
+  <!-- Start template project/includes/flash_player_object.html -->
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="scratch" style="visibility:visible">
+        <param name="movie" value="http://alpha.scratch.mit.edu/scratchr2/static//Scratch_new.swf"/>
+        <param name="allowScriptAccess" value="sameDomain">
+        <param name="allowFullScreen" value="true">
+        <param name="wmode" value="opaque">
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="http://web.archive.org/web/20120520040921im_/http://alpha.scratch.mit.edu/scratchr2/static//Scratch_new.swf" width="100%" height="100%" style="visibility:visible">
+          <param name="movie" value="http://alpha.scratch.mit.edu/scratchr2/static//Scratch_new.swf"/>
+          <param name="allowScriptAccess" value="sameDomain">
+          <param name="allowFullScreen" value="true">
+          <param name="wmode" value="opaque">
+        <!--<![endif]-->
+          <a href="http://web.archive.org/web/20120520040921/http://www.adobe.com/go/getflashplayer">
+            <img src="http://web.archive.org/web/20120520040921im_/http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
+          </a>
+        <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+<!-- End template project/includes/flash_player_object.html -->
+
+<!-- End template projects/editor.html project-swf -->
+ 
+        </div>
+        
+      </div>
+      <div class="info tabs" id="tabs">
+        <div class="tabs-index" id="tabs-index">
+          
+        </div>
+        <div class="tabs-content" id="tabs-content">
+          
+        </div>
+      </div>
+        <div class="actions clearfix">
+          
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="cols related">
+  <div class="col-11">
+    <div class="box">
+      <div class="box-head">
+        <h4>Comments (0)
+      </div>
+      <div class="box-content" id="comments">
+               
+        
+      </div>
+    </div>
+  </div>
+   
+  <div class="col-5">
+    
+    <div class="box">
+      <div class="box-head">
+        <h4>Remixes (0)</h4>
+      </div>
+      <div class="box-content grey">
+        
+      </div>
+    </div>
+    
+
+    
+    <div class="box">
+      <div class="box-head">
+        <h4>Related Projects (0)</h4>
+      </div>
+      <div class="box-content grey">
+        
+      </div>
+    </div>
+    
+    
+    
+    <div class="box galleries" id="galleries">
+      <div class="box-head">
+        <h4>Galleries  (0)</h4>
+      </div>
+      <div class="box-content grey">
+        
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+
+	    </div>
+	
+	    <div class="modal hide fade in" id="login-dialog" style="width: 450px">
+
+  
+  <div class="modal-header">
+    <a href="#" class="close" data-dismiss="modal">x</a>
+    <h3>This feature is not available yet</h3>
+  </div>
+  <div class="modal-body">
+    You'll be able to use this feature when Scratch 2.0 is officially released.
+  </div>
+  <div class="modal-footer">
+    <span data-dismiss="modal" class="button small grey"><span>OK<span></span>
+  </div>
+  
+</div>
+
+	    
+	    
+	    
+    <script>
+
+    $(document).ready(function() {
+      $('body').on('click.login', '[data-control="modal-login"]', function() {$('#login-dialog').modal('show')});
+      $('.notifications').notificationsAlert();
+//       $('#admin-panel').adminPanel();
+    });
+    </script>
+    
+    
+    <div id="admin-panel">
+      <div class="expand" data-control="expand">&gt;</div>
+      <div class="admin-content">
+        <h3>Admin Panel</h3>
+        <div class="dismiss" data-control="dismiss">x</div>
+        
+<div class="status unreviewed">unreviewed</div>
+<div class="status fe">for everyone</div>
+<div class="status censored">censored</div>
+<div class="status nfe">Not for everyone</div>
+<form> 
+  <h4>Review status</h4>
+  <div class="control-group">
+    <label class="radio">
+      <input type="radio" name="review-status" checked>Unreviewed
+    </label>
+    <label class="radio">
+      <input type="radio" name="review-status">For Everyone (FE)
+    </label>
+    <label class="radio">
+      <input type="radio" name="review-status">Not For Everyone (NFE)
+    </label>
+    <label class="radio">
+      <input type="radio" name="review-status">Censored Inappropriate
+    </label>
+  </div>
+  <p class="control-group">Last reviewed by: N/A</p>
+</form>
+
+<h4>Community Status</h4>
+<div class="line">
+  <span class="button small grey"><span>Feature it</span></span>
+</div>
+
+<h4>Edit history</h4>
+<span class="ip">216.27.61.137</span>
+<span class="ip">216.27.61.137</span>
+<h4>Comments</h4>
+<span>Show Deleted</span>
+
+ 
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+     FILE ARCHIVED ON 04:09:21 May 20, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:39:05 Sep 28, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 143.833
+  exclusion.robots: 0.205
+  exclusion.robots.policy: 0.195
+  RedisCDXSource: 1.139
+  esindex: 0.01
+  LoadShardBlock: 119.916 (3)
+  PetaboxLoader3.datanode: 97.511 (5)
+  CDXLines.iter: 19.861 (3)
+  PetaboxLoader3.resolve: 57.077 (2)
+  load_resource: 82.474 (2)
+-->
